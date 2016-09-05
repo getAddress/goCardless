@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CB5AAE6-FEC5-4746-B6BB-2EFAC592765F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>getAddress.GoCardless</RootNamespace>
+    <AssemblyName>getAddress.GoCardless</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="2015-07-06\GoCardlessApi.cs" />
+    <Compile Include="2015-07-06\Api\AccessToken.cs" />
+    <Compile Include="2015-07-06\Api\ApiBase.cs" />
+    <Compile Include="2015-07-06\Api\CustomerApi.cs" />
+    <Compile Include="2015-07-06\Api\CustomerBankAccountApi.cs" />
+    <Compile Include="2015-07-06\Api\Environment.cs" />
+    <Compile Include="2015-07-06\Api\MandateApi.cs" />
+    <Compile Include="2015-07-06\Api\Responses\CustomerBankAccountResponse.cs" />
+    <Compile Include="2015-07-06\Api\Responses\CustomerResponse.cs" />
+    <Compile Include="2015-07-06\Api\Responses\Enums.cs" />
+    <Compile Include="2015-07-06\Api\Responses\MandateResponse.cs" />
+    <Compile Include="2015-07-06\Api\Responses\ResponseBase.cs" />
+    <Compile Include="2015-07-06\Api\Responses\SubscriptionResponse.cs" />
+    <Compile Include="2015-07-06\Api\SubscriptionApi.cs" />
+    <Compile Include="2015-07-06\Common\Ids\CustomerBankAccountId.cs" />
+    <Compile Include="2015-07-06\Common\Ids\CustomerId.cs" />
+    <Compile Include="2015-07-06\Common\Ids\MandateId.cs" />
+    <Compile Include="2015-07-06\Common\Ids\SubscriptionId.cs" />
+    <Compile Include="2015-07-06\Common\ValueBase.cs" />
+    <Compile Include="2015-07-06\Webhook\Enums.cs" />
+    <Compile Include="2015-07-06\Webhook\IWebhookEvent.cs" />
+    <Compile Include="2015-07-06\Webhook\SubscriptionCreatedWebhookEvent.cs" />
+    <Compile Include="2015-07-06\Webhook\Subscriptions.cs" />
+    <Compile Include="2015-07-06\Webhook\SubscriptionWebhookEvent.cs" />
+    <Compile Include="2015-07-06\Webhook\WebhookEvent.cs" />
+    <Compile Include="2015-07-06\Webhook\WebhookEventCollection.cs" />
+    <Compile Include="2015-07-06\WebhookHandler.cs" />
+    <Compile Include="2015-07-06\Webhook\Links.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

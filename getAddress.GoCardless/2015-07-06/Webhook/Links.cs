@@ -1,0 +1,26 @@
+﻿using Newtonsoft.Json;
+
+namespace getAddress.GoCardless._2015_07_06.Webhook
+{
+    [JsonObject("links")]
+    public class Links
+    {
+        [JsonProperty("subscription")]
+        public string Subscription { get; internal set; }
+
+        [JsonProperty("payment")]
+        public string Payment { get; internal set; }
+
+        [JsonProperty("mandate")]
+        public string Mandate { get; internal set; }
+
+        [JsonProperty("customer_bank_account")]
+        public string CustomerBankAccount { get; internal set; }
+
+        [JsonProperty("customer")]
+        public string Customer { get; internal set; }
+
+
+    }
+
+}
