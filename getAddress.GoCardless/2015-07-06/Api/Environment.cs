@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace getAddress.GoCardless._2015_07_06.APis
+namespace getAddress.GoCardless.APis
 {
     public class ApiEnvironment
     {

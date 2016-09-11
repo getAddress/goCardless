@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace getAddress.GoCardless._2015_07_06.Api
+namespace getAddress.GoCardless.Api
 {
     public abstract class ApiBase
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace getAddress.GoCardless._2015_07_06.Webhook
+namespace getAddress.GoCardless.Webhook
 {
     internal enum Action 
     {

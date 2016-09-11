@@ -1,10 +1,10 @@
-﻿using getAddress.GoCardless._2015_07_06.Webhook;
+﻿using getAddress.GoCardless.Webhook;
 using Newtonsoft.Json;
 using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace getAddress.GoCardless._2015_07_06
+namespace getAddress.GoCardless
 {
 
     public static class GoCardlessWebhookHandler

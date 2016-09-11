@@ -1,7 +1,7 @@
-﻿using getAddress.GoCardless._2015_07_06.Common.Ids;
+﻿using getAddress.GoCardless.Common.Ids;
 using Newtonsoft.Json;
 
-namespace getAddress.GoCardless._2015_07_06.Api.Responses
+namespace getAddress.GoCardless.Api.Responses
 {
     internal class MandateResponseSingle
     {

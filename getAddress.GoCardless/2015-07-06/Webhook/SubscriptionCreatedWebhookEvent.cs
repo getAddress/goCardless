@@ -1,6 +1,6 @@
-﻿using getAddress.GoCardless._2015_07_06.Common.Ids;
+﻿using getAddress.GoCardless.Common.Ids;
 
-namespace getAddress.GoCardless._2015_07_06.Webhook
+namespace getAddress.GoCardless.Webhook
 {
     public class SubscriptionCreatedWebhookEvent : SubscriptionWebhookEvent
     {

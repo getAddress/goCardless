@@ -1,7 +1,7 @@
-﻿using getAddress.GoCardless._2015_07_06.Common;
+﻿using getAddress.GoCardless.Common;
 
 
-namespace getAddress.GoCardless._2015_07_06.Api
+namespace getAddress.GoCardless.Api
 {
     public class AccessToken : ValueBase
     {

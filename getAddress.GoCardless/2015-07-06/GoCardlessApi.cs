@@ -1,10 +1,10 @@
-﻿using getAddress.GoCardless._2015_07_06.Api;
+﻿using getAddress.GoCardless.Api;
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-namespace getAddress.GoCardless._2015_07_06
+namespace getAddress.GoCardless
 {
 
     public class GoCardlessApi:IDisposable

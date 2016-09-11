@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace getAddress.GoCardless._2015_07_06.Common
+namespace getAddress.GoCardless.Common
 {
     public abstract class ValueBase
     {

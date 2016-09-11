@@ -1,7 +1,7 @@
-﻿using getAddress.GoCardless._2015_07_06.Webhook;
+﻿using getAddress.GoCardless.Webhook;
 using Newtonsoft.Json;
 
-namespace getAddress.GoCardless._2015_07_06.Api.Responses
+namespace getAddress.GoCardless.Api.Responses
 {
     public abstract class ResponseBase
     {

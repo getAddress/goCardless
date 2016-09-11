@@ -1,6 +1,6 @@
 ﻿
 
-namespace getAddress.GoCardless._2015_07_06.Common.Ids
+namespace getAddress.GoCardless.Common.Ids
 {
     public class SubscriptionId : ValueBase
     {

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace getAddress.GoCardless._2015_07_06.Webhook
+namespace getAddress.GoCardless.Webhook
 {
     [JsonObject("links")]
     public class Links

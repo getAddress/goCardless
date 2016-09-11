@@ -1,8 +1,8 @@
-﻿using getAddress.GoCardless._2015_07_06.Api.Responses;
-using getAddress.GoCardless._2015_07_06.Common.Ids;
+﻿using getAddress.GoCardless.Api.Responses;
+using getAddress.GoCardless.Common.Ids;
 using System.Threading.Tasks;
 
-namespace getAddress.GoCardless._2015_07_06.Api
+namespace getAddress.GoCardless.Api
 {
     public class SubscriptionApi : ApiBase
     {

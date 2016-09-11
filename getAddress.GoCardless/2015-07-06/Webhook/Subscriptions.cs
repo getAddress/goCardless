@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-namespace getAddress.GoCardless._2015_07_06.Webhook
+namespace getAddress.GoCardless.Webhook
 {
     public class Subscriptions
     {

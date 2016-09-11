@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Converters;
 using System;
 
-namespace getAddress.GoCardless._2015_07_06.Webhook
+namespace getAddress.GoCardless.Webhook
 {
    
     internal class WebhookEvent : IWebhookEvent 
