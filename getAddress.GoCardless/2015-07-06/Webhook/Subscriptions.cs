@@ -19,4 +19,6 @@ namespace getAddress.GoCardless.Webhook
             return WebhookEventCollection.AllWebhooks.Where(s => s.ResourceType == ResourceType.subscriptions).Where(s => s.ActionType == Action.created).Select(s => new SubscriptionCreatedWebhookEvent(s));
         }
     }
+
+    
 }

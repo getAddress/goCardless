@@ -14,4 +14,5 @@ namespace getAddress.GoCardless.Webhook
         public SubscriptionId SubscriptionId { get; set; }
 
     }
+    
 }

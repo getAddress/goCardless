@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="2015-07-06\Common\Ids\PayoutId.cs" />
     <Compile Include="2015-07-06\GoCardlessApi.cs" />
     <Compile Include="2015-07-06\Api\AccessToken.cs" />
     <Compile Include="2015-07-06\Api\ApiBase.cs" />
@@ -66,6 +67,9 @@
     <Compile Include="2015-07-06\Common\ValueBase.cs" />
     <Compile Include="2015-07-06\Webhook\Enums.cs" />
     <Compile Include="2015-07-06\Webhook\IWebhookEvent.cs" />
+    <Compile Include="2015-07-06\Webhook\PayoutPaidWebhookEvent.cs" />
+    <Compile Include="2015-07-06\Webhook\Payouts.cs" />
+    <Compile Include="2015-07-06\Webhook\PayoutWebhookEvent.cs" />
     <Compile Include="2015-07-06\Webhook\SubscriptionCreatedWebhookEvent.cs" />
     <Compile Include="2015-07-06\Webhook\Subscriptions.cs" />
     <Compile Include="2015-07-06\Webhook\SubscriptionWebhookEvent.cs" />

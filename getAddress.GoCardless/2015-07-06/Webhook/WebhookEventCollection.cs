@@ -15,6 +15,7 @@ namespace getAddress.GoCardless.Webhook
             if(webhooks != null && IsValid) AddRange(webhooks);
 
             Subscriptions = new Subscriptions(this);
+            Payouts = new Payouts(this);
         }
 
         internal IEnumerable<WebhookEvent> AllWebhooks
@@ -26,6 +27,11 @@ namespace getAddress.GoCardless.Webhook
         public bool IsValid { get; }
 
         public Subscriptions Subscriptions
+        {
+            get;
+        }
+
+        public Payouts Payouts
         {
             get;
         }

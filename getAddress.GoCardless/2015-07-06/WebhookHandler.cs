@@ -16,7 +16,17 @@ namespace getAddress.GoCardless
             public WebhookEvent[] Events { get; set; }
         }
 
-        public static WebhookEventCollection GetEvents(string json, string signature, string secret)
+        public static WebhookEventCollection GetEvents(string json)
+        {
+            if (json == null) throw new ArgumentNullException(nameof(json));
+            
+            var webhookEvents = JsonConvert.DeserializeObject<WebhookEvents>(json);
+
+            return new WebhookEventCollection(webhookEvents.Events, true);
+          
+        }
+
+        public static WebhookEventCollection GetSignedEvents(string json, string signature, string secret)
         {
             if (json == null) throw new ArgumentNullException(nameof(json));
             if (signature == null) throw new ArgumentNullException(nameof(signature));
@@ -28,12 +38,10 @@ namespace getAddress.GoCardless
 
             if (isValid)
             {
-                var webhookEvents = JsonConvert.DeserializeObject<WebhookEvents>(json);
-
-                return new WebhookEventCollection(webhookEvents.Events, true);
+                return GetEvents(json);
             }
 
-            return new WebhookEventCollection(null, false);
+            throw new ArgumentException("Invalid signature");
         }
 
         public static string HashJson(string json, string secret)

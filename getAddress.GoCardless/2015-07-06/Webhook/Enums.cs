@@ -10,7 +10,7 @@ namespace getAddress.GoCardless.Webhook
         payment_created,
         cancelled,
         finished,
-
+        paid
     }
 
     internal enum ResourceType

@@ -11,6 +11,9 @@ namespace getAddress.GoCardless.Webhook
         [JsonProperty("payment")]
         public string Payment { get; internal set; }
 
+        [JsonProperty("payout")]
+        public string Payout { get; internal set; }
+
         [JsonProperty("mandate")]
         public string Mandate { get; internal set; }
 
