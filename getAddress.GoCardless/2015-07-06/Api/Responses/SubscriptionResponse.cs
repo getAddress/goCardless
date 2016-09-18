@@ -11,7 +11,7 @@ namespace getAddress.GoCardless.Api.Responses
         public SubscriptionResponse Subscription { get; internal set; }
     }
 
-    public class SubscriptionResponse: ResponseBase
+    public class SubscriptionResponse: ResponseBase, IMandateId
     {
 
 

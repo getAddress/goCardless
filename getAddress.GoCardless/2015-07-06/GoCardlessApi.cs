@@ -25,6 +25,7 @@ namespace getAddress.GoCardless
             Mandates = new MandateApi(this);
             CustomerBankAccount = new CustomerBankAccountApi(this);
             Customer = new CustomerApi(this);
+            Creditor  = new CreditorApi(this);
 
             client = new HttpClient { BaseAddress = this.Environment.Url };
             client.DefaultRequestHeaders.TryAddWithoutValidation("GoCardless-Version", Version);
@@ -57,7 +58,12 @@ namespace getAddress.GoCardless
             get;
         }
 
-        
+        public CreditorApi Creditor
+        {
+            get;
+        }
+
+
         internal async Task<string> Get(string path)
         {
             if (path == null) throw new ArgumentNullException(nameof(path)); 

@@ -45,11 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="2015-07-06\Api\CustomerApi.cs" />
+    <Compile Include="2015-07-06\Api\Responses\CreditorResponse.cs" />
+    <Compile Include="2015-07-06\Common\CountryCode.cs" />
+    <Compile Include="2015-07-06\Common\Ids\CreditorId.cs" />
     <Compile Include="2015-07-06\Common\Ids\PayoutId.cs" />
+    <Compile Include="2015-07-06\Common\Language.cs" />
     <Compile Include="2015-07-06\GoCardlessApi.cs" />
     <Compile Include="2015-07-06\Api\AccessToken.cs" />
     <Compile Include="2015-07-06\Api\ApiBase.cs" />
-    <Compile Include="2015-07-06\Api\CustomerApi.cs" />
+    <Compile Include="2015-07-06\Api\CreditorApi.cs" />
     <Compile Include="2015-07-06\Api\CustomerBankAccountApi.cs" />
     <Compile Include="2015-07-06\Api\Environment.cs" />
     <Compile Include="2015-07-06\Api\MandateApi.cs" />

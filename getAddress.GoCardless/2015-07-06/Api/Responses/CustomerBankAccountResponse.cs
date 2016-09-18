@@ -10,7 +10,7 @@ namespace getAddress.GoCardless.Api.Responses
         public CustomerBankAccountResponse CustomerBankAccount { get; internal set; }
     }
 
-    public class CustomerBankAccountResponse : ResponseBase
+    public class CustomerBankAccountResponse : ResponseBase, ICustomerId
     {
         public CustomerId CustomerId
         {

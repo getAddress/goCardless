@@ -24,6 +24,11 @@ namespace getAddress.GoCardless.Webhook
         public string Customer { get; internal set; }
 
 
+        [JsonProperty("creditor")]
+        public string Creditor { get; internal set; }
+        
+
+
     }
 
 }

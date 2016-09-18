@@ -15,11 +15,11 @@ namespace getAddress.GoCardless.Api
 
         }
 
-        public async Task<CustomerBankAccountResponse> Get(CustomerBankAccountId customerBankAccountId)
+        public async Task<CustomerBankAccountResponse> Get(ICustomerBankAccountId customerBankAccountId)
         {
             if (customerBankAccountId == null) throw new ArgumentNullException(nameof(customerBankAccountId));
 
-            var json = await Api.Get(Path + customerBankAccountId.Value);
+            var json = await Api.Get(Path + customerBankAccountId.CustomerBankAccountId.Value);
 
             var single = Api.Deserialize<CustomerBankAccountsResponseSingle>(json);
 

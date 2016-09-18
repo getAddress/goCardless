@@ -8,7 +8,7 @@ namespace getAddress.GoCardless.Api.Responses
         [JsonProperty("mandates")]
         public MandateResponse Mandate { get; internal set; }
     }
-    public class MandateResponse : ResponseBase
+    public class MandateResponse : ResponseBase, ICreditorId, ICustomerBankAccountId
     {
 
         public CustomerBankAccountId CustomerBankAccountId
@@ -18,6 +18,16 @@ namespace getAddress.GoCardless.Api.Responses
                 return new CustomerBankAccountId(Links?.CustomerBankAccount);
             }
         }
+
+        public CreditorId CreditorId
+        {
+            get
+            {
+                return new CreditorId(Links?.Creditor);
+            }
+        }
+
+     
 
     }
 }

@@ -15,11 +15,11 @@ namespace getAddress.GoCardless.Api
 
         }
 
-        public async Task<CustomerResponse> Get(CustomerId customerId)
+        public async Task<CustomerResponse> Get(ICustomerId customerId)
         {
             if (customerId == null) throw new ArgumentNullException(nameof(customerId));
 
-            var json = await Api.Get(Path + customerId.Value);
+            var json = await Api.Get(Path + customerId.CustomerId.Value);
 
             var single = Api.Deserialize<CustomerResponseSingle>(json);
 

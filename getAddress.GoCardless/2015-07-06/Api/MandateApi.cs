@@ -13,9 +13,9 @@ namespace getAddress.GoCardless.Api
         {
 
         }
-        public async Task<MandateResponse> Get(MandateId mandateId)
+        public async Task<MandateResponse> Get(IMandateId mandateId)
         {
-            var json = await Api.Get(Path + mandateId.Value);
+            var json = await Api.Get(Path + mandateId.MandateId.Value);
 
             var single = Api.Deserialize<MandateResponseSingle>(json);
 
