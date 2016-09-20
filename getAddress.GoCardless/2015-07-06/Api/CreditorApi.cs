@@ -22,6 +22,8 @@ namespace getAddress.GoCardless.Api
 
             var single = Api.Deserialize<CreditorResponseSingle>(json);
 
+            single.Creditor.Api = Api;
+
             return single.Creditor;
         }
     }

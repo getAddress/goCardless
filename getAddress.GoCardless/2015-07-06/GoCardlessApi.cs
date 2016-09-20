@@ -1,4 +1,5 @@
 ﻿using getAddress.GoCardless.Api;
+using Newtonsoft.Json;
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -72,7 +73,12 @@ namespace getAddress.GoCardless
 
         internal T Deserialize<T>(string json)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(json);
+            var settings = new JsonSerializerSettings
+            {
+                ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor,
+            };
+
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(json, settings);
         }
 
         public void Dispose()

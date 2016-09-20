@@ -20,6 +20,8 @@ namespace getAddress.GoCardless.Api
 
             var single = Api.Deserialize<SubscriptionResponseSingle>(json);
 
+            single.Subscription.Api = Api;
+
             return single.Subscription;
         }
     }

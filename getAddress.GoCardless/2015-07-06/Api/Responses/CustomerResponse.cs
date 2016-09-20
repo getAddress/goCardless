@@ -7,12 +7,35 @@ namespace getAddress.GoCardless.Api.Responses
 {
     internal class CustomerResponseSingle
     {
+        private CustomerResponseSingle()
+        {
+
+        }
+
         [JsonProperty("customers")]
         public CustomerResponse Customer { get; internal set; }
     }
 
-    public class CustomerResponse : ResponseBase
+    internal class CustomerResponseMultiple
     {
+        private CustomerResponseMultiple()
+        {
+
+        }
+
+        [JsonProperty("customers")]
+        public CustomerResponse[] Customers { get; internal set; }
+    }
+
+    public class CustomerResponse : ResponseBase, ICustomerId
+    {
+        private CustomerResponse()
+        {
+
+        }
+
+        internal GoCardlessApi Api { get; set; }
+
         public CustomerId CustomerId { get { return new CustomerId(this.Id); } }
 
         [JsonProperty("email")]

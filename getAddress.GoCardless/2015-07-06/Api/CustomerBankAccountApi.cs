@@ -23,6 +23,8 @@ namespace getAddress.GoCardless.Api
 
             var single = Api.Deserialize<CustomerBankAccountsResponseSingle>(json);
 
+            single.CustomerBankAccount.Api = Api;
+
             return single.CustomerBankAccount;
         }
     }
