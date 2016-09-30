@@ -16,13 +16,33 @@ namespace getAddress.GoCardless.Api
 
         public async Task<SubscriptionResponse> Get(SubscriptionId subscriptionId)
         {
-            var json = await Api.Get(Path + subscriptionId.Value);
+            return await Get(Api, subscriptionId);
+        }
 
-            var single = Api.Deserialize<SubscriptionResponseSingle>(json);
+        public static async Task<SubscriptionResponse> Get(GoCardlessApi api, SubscriptionId subscriptionId)
+        {
+            var json = await api.Get(Path + subscriptionId.Value);
 
-            single.Subscription.Api = Api;
+            var single = api.Deserialize<SubscriptionResponseSingle>(json);
+
+            single.Subscription.Api = api;
 
             return single.Subscription;
+        }
+
+        public async Task Cancel(ISubscriptionId subscriptionId)
+        {
+            await Cancel(Api, subscriptionId);
+        }
+
+        public static  async Task Cancel(GoCardlessApi api, ISubscriptionId subscriptionId)
+        {
+          var result =  await api.Post(Path + subscriptionId.SubscriptionId.Value + "/actions/cancel");
+
+            if (!result.IsSuccessStatusCode)
+            {
+                throw new System.Exception(result.ReasonPhrase);
+            }
         }
     }
 }

@@ -18,7 +18,7 @@ namespace getAddress.GoCardless.Api.Responses
         }
     }
 
-    public class SubscriptionResponse : ResponseBase, IMandateId
+    public class SubscriptionResponse : ResponseBase, IMandateId, ISubscriptionId
     {
 
         private SubscriptionResponse()
@@ -27,6 +27,9 @@ namespace getAddress.GoCardless.Api.Responses
         }
 
         internal GoCardlessApi Api { get; set; }
+
+        [JsonIgnore]
+        public SubscriptionId SubscriptionId { get { return new SubscriptionId(this.Id); } }
 
         [JsonProperty("name")]
         public string Name { get; internal set; }
@@ -96,6 +99,16 @@ namespace getAddress.GoCardless.Api.Responses
             var mandate = await GetMandate(subscriptionResponse);
 
             return await mandate.GetCreditor();
+        }
+
+        public async Task Cancel()
+        {
+            await Cancel(Api, this);
+        }
+
+        public static async Task Cancel(GoCardlessApi api, ISubscriptionId subscriptionId)
+        {
+           await api.Subscriptions.Cancel(subscriptionId);
         }
 
     }

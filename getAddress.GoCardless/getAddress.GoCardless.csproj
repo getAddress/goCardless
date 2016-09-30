@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="2015-07-06\Api\CustomerApi.cs" />
+    <Compile Include="2015-07-06\Api\CustomerListOptions.cs" />
     <Compile Include="2015-07-06\Api\Responses\CreditorResponse.cs" />
     <Compile Include="2015-07-06\Common\CountryCode.cs" />
     <Compile Include="2015-07-06\Common\Ids\CreditorId.cs" />

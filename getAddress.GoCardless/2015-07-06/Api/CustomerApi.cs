@@ -1,4 +1,5 @@
-﻿using getAddress.GoCardless.Api.Responses;
+﻿
+using getAddress.GoCardless.Api.Responses;
 using getAddress.GoCardless.Common.Ids;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace getAddress.GoCardless.Api
             return await Get(Api, customerId);
         }
 
+
         public static async Task<CustomerResponse> Get(GoCardlessApi api, ICustomerId customerId)
         {
             if (api == null) throw new ArgumentNullException(nameof(api)); 
@@ -37,23 +39,56 @@ namespace getAddress.GoCardless.Api
             return single.Customer;
         }
 
-        public async Task<IEnumerable<CustomerResponse>> List()
+        public async Task Update(CustomerResponse customer)
         {
-            return await List(Api);
+             await Update(Api, customer);
+        }
+        public static async Task Update(GoCardlessApi api, CustomerResponse customer)
+        {
+            if (api == null) throw new ArgumentNullException(nameof(api));
+            if (customer == null) throw new ArgumentNullException(nameof(customer));
+            if (customer.CustomerId == null) throw new ArgumentNullException(nameof(customer.CustomerId));
+
+            var singleCustomer = new CustomerResponseSingle { Customer = customer };
+
+            var newPath = Path + '/' + customer.CustomerId.Value;
+
+            var response = await api.Put(newPath, singleCustomer);
+
+            if (response.IsSuccessStatusCode)
+            {
+                customer.ResetOriginalProperties();
+            }
+            else
+            {
+                throw new Exception(response.ReasonPhrase);
+            }
+            
         }
 
-        public static async Task<IEnumerable<CustomerResponse>> List(GoCardlessApi api)
+        public async Task<IEnumerable<CustomerResponse>> List(CustomerListOptions options = null)
+        {
+            return await List(Api, options);
+        }
+
+        public static async Task<IEnumerable<CustomerResponse>> List(GoCardlessApi api, CustomerListOptions options = null)
         {
             if (api == null) throw new ArgumentNullException(nameof(api));
 
-           
-            var query = HttpUtility.ParseQueryString(string.Empty);
-            //test code
-            query["limit"] = 200.ToString();
-            query["after"] = "CU00033MGFS5GT";
-            //test code
-           
-            var json = await api.Get(Path + '?' + query.ToString());
+            var newPath = Path;
+
+            if (options != null)//todo: move out
+            {
+                var query = HttpUtility.ParseQueryString(string.Empty);
+                
+                if(options.Limit > 0) query["limit"] = options.Limit.ToString();
+                if(options.After != null) query["after"] = options.After.Value;
+                if (options.Before != null) query["before"] = options.Before.Value;
+               
+                newPath = newPath + '?' + query.ToString();
+            }
+
+            var json = await api.Get(newPath);
 
             var multiple = api.Deserialize<CustomerResponseMultiple>(json);
 
@@ -65,5 +100,9 @@ namespace getAddress.GoCardless.Api
             return multiple.Customers;
         }
 
-        }
+
+
+ }
+
+
 }

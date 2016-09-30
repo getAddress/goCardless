@@ -14,6 +14,11 @@ namespace getAddress.GoCardless
         private readonly AccessToken AccessToken;
         private readonly HttpClient client;
 
+        public GoCardlessApi(string accessToken):this(GetApiEnvironment(accessToken),new AccessToken(accessToken))
+        {
+           
+        }
+
         public GoCardlessApi(APis.ApiEnvironment environment, AccessToken accessToken)
         {
             if (environment == null) throw new ArgumentNullException(nameof(environment));
@@ -32,6 +37,22 @@ namespace getAddress.GoCardless
             client.DefaultRequestHeaders.TryAddWithoutValidation("GoCardless-Version", Version);
             client.DefaultRequestHeaders.TryAddWithoutValidation("accept", "application/json");
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AccessToken.Value);
+        }
+
+        private static APis.ApiEnvironment GetApiEnvironment(string accessToken)
+        {
+            if (accessToken.StartsWith("live_"))
+            {
+                return APis.ApiEnvironment.Live;
+            }
+            if (accessToken.StartsWith("sandbox_"))
+            {
+                return APis.ApiEnvironment.Sandbox;
+            }
+            else
+            {
+                throw  new ArgumentNullException(nameof(accessToken));
+            }
         }
 
         public APis.ApiEnvironment Environment
@@ -71,6 +92,30 @@ namespace getAddress.GoCardless
             return await client.GetStringAsync(path);
         }
 
+        internal async Task<HttpResponseMessage> Post(string path, object entity = null)
+        {
+            if (path == null) throw new ArgumentNullException(nameof(path));
+
+            entity = entity ?? string.Empty;
+            var jsonString = await Task.Factory.StartNew(() => JsonConvert.SerializeObject(entity));
+            HttpContent httpContent = new StringContent(jsonString);
+            httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+            return await client.PostAsync(path, httpContent);
+        }
+
+        internal async Task<HttpResponseMessage> Put(string path, object entity)
+        {
+            if (path == null) throw new ArgumentNullException(nameof(path));
+
+            var jsonString = await Task.Factory.StartNew(() => JsonConvert.SerializeObject(entity));
+
+            HttpContent httpContent = new StringContent(jsonString);
+            httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+            return await client.PutAsync(path, httpContent);
+        }
+
         internal T Deserialize<T>(string json)
         {
             var settings = new JsonSerializerSettings
@@ -78,7 +123,7 @@ namespace getAddress.GoCardless
                 ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor,
             };
 
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(json, settings);
+            return JsonConvert.DeserializeObject<T>(json, settings);
         }
 
         public void Dispose()
