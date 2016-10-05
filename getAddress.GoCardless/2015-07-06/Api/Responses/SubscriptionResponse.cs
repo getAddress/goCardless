@@ -41,6 +41,10 @@ namespace getAddress.GoCardless.Api.Responses
         [JsonConverter(typeof(StringEnumConverter))]
         public Interval Interval { get; internal set; }
 
+        [JsonProperty("status")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Status Status { get; internal set; }
+
         public MandateId MandateId
         {
             get
