@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("getAddress.GoCardless")]
+[assembly: AssemblyTitle("getAddress.goCardless4.6.1")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("getAddress.GoCardless")]
+[assembly: AssemblyProduct("getAddress.goCardless4.6.1")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1cb5aae6-fec5-4746-b6bb-2efac592765f")]
+[assembly: Guid("5deaad74-7cac-40dd-9cd4-4fea7ddba17c")]
 
 // Version information for an assembly consists of the following four values:
 //

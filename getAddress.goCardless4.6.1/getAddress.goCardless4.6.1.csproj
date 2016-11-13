@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5DEAAD74-7CAC-40DD-9CD4-4FEA7DDBA17C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>getAddress.goCardless4._6._1</RootNamespace>
+    <AssemblyName>getAddress.goCardless4.6.1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\AccessToken.cs">
+      <Link>Api\AccessToken.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\ApiBase.cs">
+      <Link>Api\ApiBase.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\CreditorApi.cs">
+      <Link>Api\CreditorApi.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\CustomerApi.cs">
+      <Link>Api\CustomerApi.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\CustomerBankAccountApi.cs">
+      <Link>Api\CustomerBankAccountApi.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\CustomerListOptions.cs">
+      <Link>Api\CustomerListOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\Environment.cs">
+      <Link>Api\Environment.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\MandateApi.cs">
+      <Link>Api\MandateApi.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\Responses\CreditorResponse.cs">
+      <Link>Api\Responses\CreditorResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\Responses\CustomerBankAccountResponse.cs">
+      <Link>Api\Responses\CustomerBankAccountResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\Responses\CustomerResponse.cs">
+      <Link>Api\Responses\CustomerResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\Responses\Enums.cs">
+      <Link>Api\Responses\Enums.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\Responses\MandateResponse.cs">
+      <Link>Api\Responses\MandateResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\Responses\ResponseBase.cs">
+      <Link>Api\Responses\ResponseBase.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\Responses\SubscriptionResponse.cs">
+      <Link>Api\Responses\SubscriptionResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\SubscriptionApi.cs">
+      <Link>Api\SubscriptionApi.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Common\CountryCode.cs">
+      <Link>Common\CountryCode.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Common\Ids\CreditorId.cs">
+      <Link>Common\Ids\CreditorId.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Common\Ids\CustomerBankAccountId.cs">
+      <Link>Common\Ids\CustomerBankAccountId.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Common\Ids\CustomerId.cs">
+      <Link>Common\Ids\CustomerId.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Common\Ids\MandateId.cs">
+      <Link>Common\Ids\MandateId.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Common\Ids\PayoutId.cs">
+      <Link>Common\Ids\PayoutId.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Common\Ids\SubscriptionId.cs">
+      <Link>Common\Ids\SubscriptionId.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Common\Language.cs">
+      <Link>Common\Language.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Common\ValueBase.cs">
+      <Link>Common\ValueBase.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\GoCardlessApi.cs">
+      <Link>2015-07-06\GoCardlessApi.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\WebhookHandler.cs">
+      <Link>2015-07-06\WebhookHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Webhook\Enums.cs">
+      <Link>2015-07-06\Webhook\Enums.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Webhook\IWebhookEvent.cs">
+      <Link>2015-07-06\Webhook\IWebhookEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Webhook\Links.cs">
+      <Link>2015-07-06\Webhook\Links.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Webhook\PayoutPaidWebhookEvent.cs">
+      <Link>2015-07-06\Webhook\PayoutPaidWebhookEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Webhook\Payouts.cs">
+      <Link>2015-07-06\Webhook\Payouts.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Webhook\PayoutWebhookEvent.cs">
+      <Link>2015-07-06\Webhook\PayoutWebhookEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Webhook\SubscriptionCreatedWebhookEvent.cs">
+      <Link>2015-07-06\Webhook\SubscriptionCreatedWebhookEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Webhook\Subscriptions.cs">
+      <Link>2015-07-06\Webhook\Subscriptions.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Webhook\SubscriptionWebhookEvent.cs">
+      <Link>2015-07-06\Webhook\SubscriptionWebhookEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Webhook\WebhookEvent.cs">
+      <Link>2015-07-06\Webhook\WebhookEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Webhook\WebhookEventCollection.cs">
+      <Link>2015-07-06\Webhook\WebhookEventCollection.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

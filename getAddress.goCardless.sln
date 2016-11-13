@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "getAddress.GoCardless", "ge
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".net 4.5.1", ".net 4.5.1", "{CFC90DBC-1E77-4CEC-AE22-CC362AADD066}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".net 4.6.1", ".net 4.6.1", "{03788796-4D4E-4F11-ADED-1D74702C33D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "getAddress.goCardless4.6.1", "getAddress.goCardless4.6.1\getAddress.goCardless4.6.1.csproj", "{5DEAAD74-7CAC-40DD-9CD4-4FEA7DDBA17C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +21,16 @@ Global
 		{1CB5AAE6-FEC5-4746-B6BB-2EFAC592765F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CB5AAE6-FEC5-4746-B6BB-2EFAC592765F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CB5AAE6-FEC5-4746-B6BB-2EFAC592765F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DEAAD74-7CAC-40DD-9CD4-4FEA7DDBA17C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DEAAD74-7CAC-40DD-9CD4-4FEA7DDBA17C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DEAAD74-7CAC-40DD-9CD4-4FEA7DDBA17C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DEAAD74-7CAC-40DD-9CD4-4FEA7DDBA17C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1CB5AAE6-FEC5-4746-B6BB-2EFAC592765F} = {CFC90DBC-1E77-4CEC-AE22-CC362AADD066}
+		{5DEAAD74-7CAC-40DD-9CD4-4FEA7DDBA17C} = {03788796-4D4E-4F11-ADED-1D74702C33D1}
 	EndGlobalSection
 EndGlobal
