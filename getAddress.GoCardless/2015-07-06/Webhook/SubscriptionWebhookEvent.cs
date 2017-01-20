@@ -1,8 +1,9 @@
-﻿using System;
+﻿using getAddress.GoCardless.Common.Ids;
+using System;
 
 namespace getAddress.GoCardless.Webhook
 {
-    public abstract class SubscriptionWebhookEvent : IWebhookEvent
+    public abstract class SubscriptionWebhookEvent : IWebhookEvent,ISubscriptionId
     {
         internal SubscriptionWebhookEvent(WebhookEvent webhookEvent)
         {
@@ -12,13 +13,18 @@ namespace getAddress.GoCardless.Webhook
             {
                 this.Id = webhookEvent.Id;
                 this.CreatedAt = webhookEvent.CreatedAt;
-
             }
+            var subscriptionIdValue = webhookEvent.Links?.Subscription;
+
+            SubscriptionId = new SubscriptionId(subscriptionIdValue);
         }
 
         public string Id { get; }
 
         public DateTime CreatedAt { get; }
+
+        public SubscriptionId SubscriptionId { get; set; }
+
 
     }
 }

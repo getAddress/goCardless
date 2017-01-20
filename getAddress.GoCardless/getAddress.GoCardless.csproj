@@ -48,9 +48,12 @@
   <ItemGroup>
     <Compile Include="2015-07-06\Api\CustomerApi.cs" />
     <Compile Include="2015-07-06\Api\CustomerListOptions.cs" />
+    <Compile Include="2015-07-06\Api\PaymentApi.cs" />
     <Compile Include="2015-07-06\Api\Responses\CreditorResponse.cs" />
+    <Compile Include="2015-07-06\Api\Responses\PaymentResponse.cs" />
     <Compile Include="2015-07-06\Common\CountryCode.cs" />
     <Compile Include="2015-07-06\Common\Ids\CreditorId.cs" />
+    <Compile Include="2015-07-06\Common\Ids\PaymentId.cs" />
     <Compile Include="2015-07-06\Common\Ids\PayoutId.cs" />
     <Compile Include="2015-07-06\Common\Language.cs" />
     <Compile Include="2015-07-06\GoCardlessApi.cs" />
@@ -74,8 +77,11 @@
     <Compile Include="2015-07-06\Common\ValueBase.cs" />
     <Compile Include="2015-07-06\Webhook\Enums.cs" />
     <Compile Include="2015-07-06\Webhook\IWebhookEvent.cs" />
+    <Compile Include="2015-07-06\Webhook\PaymentPaidOutWebhookEvent.cs" />
     <Compile Include="2015-07-06\Webhook\PayoutPaidWebhookEvent.cs" />
+    <Compile Include="2015-07-06\Webhook\Payments.cs" />
     <Compile Include="2015-07-06\Webhook\Payouts.cs" />
+    <Compile Include="2015-07-06\Webhook\PaymentWebhookEvent.cs" />
     <Compile Include="2015-07-06\Webhook\PayoutWebhookEvent.cs" />
     <Compile Include="2015-07-06\Webhook\SubscriptionCreatedWebhookEvent.cs" />
     <Compile Include="2015-07-06\Webhook\Subscriptions.cs" />

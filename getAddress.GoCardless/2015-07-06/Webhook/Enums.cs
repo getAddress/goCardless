@@ -1,6 +1,7 @@
 ﻿
 namespace getAddress.GoCardless.Webhook
 {
+    //these are the objects status
     internal enum Action 
     {
         unknown,
@@ -10,7 +11,8 @@ namespace getAddress.GoCardless.Webhook
         payment_created,
         cancelled,
         finished,
-        paid
+        paid,
+        paid_out
     }
 
     internal enum ResourceType

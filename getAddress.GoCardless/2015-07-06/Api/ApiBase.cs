@@ -1,5 +1,5 @@
-﻿using System;
-
+﻿
+using System;
 
 namespace getAddress.GoCardless.Api
 {
@@ -13,6 +13,7 @@ namespace getAddress.GoCardless.Api
 
             Api = api;
         }
+
 
     }
 }

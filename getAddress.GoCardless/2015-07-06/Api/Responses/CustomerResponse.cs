@@ -2,6 +2,7 @@
 using getAddress.GoCardless.Common.Ids;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System;
 using System.Threading.Tasks;
 
 namespace getAddress.GoCardless.Api.Responses
@@ -189,5 +190,7 @@ namespace getAddress.GoCardless.Api.Responses
         {
              await api.Customer.Update(customer);
         }
+
+        
     }
 }

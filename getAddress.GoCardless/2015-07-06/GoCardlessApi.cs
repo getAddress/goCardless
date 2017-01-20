@@ -32,11 +32,17 @@ namespace getAddress.GoCardless
             CustomerBankAccount = new CustomerBankAccountApi(this);
             Customer = new CustomerApi(this);
             Creditor  = new CreditorApi(this);
+            Payments = new PaymentApi(this);
 
             client = new HttpClient { BaseAddress = this.Environment.Url };
             client.DefaultRequestHeaders.TryAddWithoutValidation("GoCardless-Version", Version);
             client.DefaultRequestHeaders.TryAddWithoutValidation("accept", "application/json");
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AccessToken.Value);
+        }
+
+        internal HttpClient HttpClient
+        {
+            get { return client; }
         }
 
         private static APis.ApiEnvironment GetApiEnvironment(string accessToken)
@@ -69,6 +75,11 @@ namespace getAddress.GoCardless
         {
             get;
         }
+        public PaymentApi Payments
+        {
+            get;
+        }
+        
 
         public CustomerBankAccountApi CustomerBankAccount
         {

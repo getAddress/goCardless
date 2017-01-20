@@ -14,14 +14,14 @@ namespace getAddress.GoCardless.Api
 
         }
 
-        public async Task<SubscriptionResponse> Get(SubscriptionId subscriptionId)
+        public async Task<SubscriptionResponse> Get(ISubscriptionId subscriptionId)
         {
             return await Get(Api, subscriptionId);
         }
 
-        public static async Task<SubscriptionResponse> Get(GoCardlessApi api, SubscriptionId subscriptionId)
+        public static async Task<SubscriptionResponse> Get(GoCardlessApi api, ISubscriptionId subscriptionId)
         {
-            var json = await api.Get(Path + subscriptionId.Value);
+            var json = await api.Get(Path + subscriptionId.SubscriptionId.Value);
 
             var single = api.Deserialize<SubscriptionResponseSingle>(json);
 

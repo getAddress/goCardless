@@ -98,6 +98,7 @@ namespace getAddress.GoCardless.Api.Responses
         {
             return await GetCreditor(this);
         }
+
         public static async Task<CreditorResponse> GetCreditor(SubscriptionResponse subscriptionResponse)
         {
             var mandate = await GetMandate(subscriptionResponse);

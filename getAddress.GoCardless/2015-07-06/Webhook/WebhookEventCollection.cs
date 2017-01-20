@@ -16,6 +16,7 @@ namespace getAddress.GoCardless.Webhook
 
             Subscriptions = new Subscriptions(this);
             Payouts = new Payouts(this);
+            Payments = new Payments(this);
         }
 
         internal IEnumerable<WebhookEvent> AllWebhooks
@@ -32,6 +33,11 @@ namespace getAddress.GoCardless.Webhook
         }
 
         public Payouts Payouts
+        {
+            get;
+        }
+
+        public Payments Payments
         {
             get;
         }

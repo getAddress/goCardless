@@ -70,6 +70,9 @@
     <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\MandateApi.cs">
       <Link>Api\MandateApi.cs</Link>
     </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\PaymentApi.cs">
+      <Link>Api\PaymentApi.cs</Link>
+    </Compile>
     <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\Responses\CreditorResponse.cs">
       <Link>Api\Responses\CreditorResponse.cs</Link>
     </Compile>
@@ -84,6 +87,9 @@
     </Compile>
     <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\Responses\MandateResponse.cs">
       <Link>Api\Responses\MandateResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\Responses\PaymentResponse.cs">
+      <Link>Api\Responses\PaymentResponse.cs</Link>
     </Compile>
     <Compile Include="..\getAddress.GoCardless\2015-07-06\Api\Responses\ResponseBase.cs">
       <Link>Api\Responses\ResponseBase.cs</Link>
@@ -108,6 +114,9 @@
     </Compile>
     <Compile Include="..\getAddress.GoCardless\2015-07-06\Common\Ids\MandateId.cs">
       <Link>Common\Ids\MandateId.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Common\Ids\PaymentId.cs">
+      <Link>Common\Ids\PaymentId.cs</Link>
     </Compile>
     <Compile Include="..\getAddress.GoCardless\2015-07-06\Common\Ids\PayoutId.cs">
       <Link>Common\Ids\PayoutId.cs</Link>
@@ -135,6 +144,15 @@
     </Compile>
     <Compile Include="..\getAddress.GoCardless\2015-07-06\Webhook\Links.cs">
       <Link>2015-07-06\Webhook\Links.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Webhook\PaymentPaidOutWebhookEvent.cs">
+      <Link>2015-07-06\Webhook\PaymentPaidOutWebhookEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Webhook\Payments.cs">
+      <Link>2015-07-06\Webhook\Payments.cs</Link>
+    </Compile>
+    <Compile Include="..\getAddress.GoCardless\2015-07-06\Webhook\PaymentWebhookEvent.cs">
+      <Link>2015-07-06\Webhook\PaymentWebhookEvent.cs</Link>
     </Compile>
     <Compile Include="..\getAddress.GoCardless\2015-07-06\Webhook\PayoutPaidWebhookEvent.cs">
       <Link>2015-07-06\Webhook\PayoutPaidWebhookEvent.cs</Link>

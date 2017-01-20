@@ -4,27 +4,28 @@ using System;
 
 namespace getAddress.GoCardless.Webhook
 {
-    public abstract class PayoutWebhookEvent : IWebhookEvent,IPayoutId
+    public abstract class PaymentWebhookEvent : IWebhookEvent, IPaymentId
     {
-        internal PayoutWebhookEvent(WebhookEvent webhookEvent)
+        internal PaymentWebhookEvent(WebhookEvent webhookEvent)
         {
             if (webhookEvent == null) throw new ArgumentNullException(nameof(webhookEvent));
 
-            if (webhookEvent.ResourceType == ResourceType.payouts)
+            if (webhookEvent.ResourceType == ResourceType.payments)
             {
                 this.Id = webhookEvent.Id;
                 this.CreatedAt = webhookEvent.CreatedAt;
+
+                var paymentIdValue = webhookEvent.Links?.Payment;
+
+                PaymentId = new PaymentId(paymentIdValue);
             }
-
-            var payoutIdValue = webhookEvent.Links?.Payout;
-
-            PayoutId = new PayoutId(payoutIdValue);
         }
 
         public string Id { get; }
 
         public DateTime CreatedAt { get; }
 
-        public PayoutId PayoutId { get; set; }
+        public PaymentId PaymentId { get; set; }
+
     }
 }
