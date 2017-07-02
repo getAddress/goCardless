@@ -4,16 +4,18 @@ goCardless API for .net
 Wrapper for:
 https://developer.gocardless.com/api-reference/2015-07-06/#overview
 
-<h2>Install</h2>
+## Install
+
 ```
 Install from Nuget:
 
 PM> Install-Package getAddress.goCardless
 ```
 
-<h2>Typical Usage</h2>
+## Typical Usage
 
-<h3> Cancel a subscription </h3>
+### Cancel a subscription 
+
 ```
 using (var api = new GoCardlessApi("<your API Key>"))  /*Use ReadWrite key*/
 {
@@ -26,7 +28,7 @@ using (var api = new GoCardlessApi("<your API Key>"))  /*Use ReadWrite key*/
 }
 ```
 
-<h3> Update customer email address </h3>
+### Update customer email address 
 ```
 using (var api = new GoCardlessApi("<your API Key>"))  /*Use ReadWrite key*/
 {
@@ -38,7 +40,7 @@ using (var api = new GoCardlessApi("<your API Key>"))  /*Use ReadWrite key*/
 }
 ```
 
-<h3> Webhook - New subscription </h3>
+### Webhook - New subscription 
 ```
 [HttpPost]
 public async Task<IHttpActionResult> GoCardlessWebHook()
