@@ -36,6 +36,8 @@ namespace getAddress.GoCardless.Api
 
             single.Customer.Api = api;
 
+            single.Customer.Raw = json;
+
             return single.Customer;
         }
 

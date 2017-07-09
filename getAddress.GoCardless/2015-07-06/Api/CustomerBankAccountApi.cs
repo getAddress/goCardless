@@ -25,6 +25,8 @@ namespace getAddress.GoCardless.Api
 
             single.CustomerBankAccount.Api = Api;
 
+            single.CustomerBankAccount.Raw = json;
+
             return single.CustomerBankAccount;
         }
     }

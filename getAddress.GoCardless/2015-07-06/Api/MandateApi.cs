@@ -21,6 +21,8 @@ namespace getAddress.GoCardless.Api
 
             single.Mandate.Api = Api;
 
+            single.Mandate.Raw = json;
+
             return single.Mandate;
         }
     }

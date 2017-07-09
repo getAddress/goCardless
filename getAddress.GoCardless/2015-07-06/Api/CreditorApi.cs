@@ -24,6 +24,8 @@ namespace getAddress.GoCardless.Api
 
             single.Creditor.Api = Api;
 
+            single.Creditor.Raw = json;
+
             return single.Creditor;
         }
     }

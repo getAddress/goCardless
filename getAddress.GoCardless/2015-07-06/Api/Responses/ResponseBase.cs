@@ -16,6 +16,7 @@ namespace getAddress.GoCardless.Api.Responses
         [JsonProperty("links")]
         internal Links Links { get; set; }
 
+        public string Raw { get; set; }
 
         public bool ShouldSerializeId()
         {

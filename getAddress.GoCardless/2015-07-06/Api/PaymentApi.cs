@@ -21,6 +21,7 @@ namespace getAddress.GoCardless.Api
             var single = Api.Deserialize<PaymentResponseSingle>(json);
 
             single.Payment.Api = Api;
+            single.Payment.Raw = json;
 
             return single.Payment;
         }
